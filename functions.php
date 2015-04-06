@@ -9,8 +9,15 @@
     return $result;
   }
 
-  function insertUser($username, $email, $usrname, $class, $dorm, $pass1, $pass2){
-    
+  function insertUser($name, $email, $usrname, $pass1, $pass2){
+    if($pass1 == $pass2){
+       $result = queryMysql("INSERT INTO user (name,email,username,password) VALUES ('$name','$email','$usrname','$pass1')");
+       include "feed.php";
+    }
+    else{
+      include "homePage.php";
+    }
+   
   }
   function displayAll($result){
      if(mysqli_num_rows($result) > 0){
