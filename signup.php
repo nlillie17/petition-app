@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<head>
-<title> Welcome!</title>
-</head>
-<body>
-<h1> Your info </h1>
-<?php 
+<?php
 	include "functions.php";
 	@$name = $_POST['name'];
 	@$email = $_POST['email'];
@@ -13,8 +7,8 @@
 	@$dorm = $_POST['dorm'];
 	@$pass1 = $_POST['pass1'];
 	@$pass2 = $_POST['pass2'];
-
-	echo $name . " " . $email . " " . $usrname . " " . $class . " " . $dorm . " " . $pass1 . " " . $pass2;
+	$result = insertUser($name,$email,$usrname,$pass1, $pass2);
+	print_r($result);
 ?>
-</body>
+
 
