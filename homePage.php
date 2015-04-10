@@ -1,3 +1,9 @@
+<?php
+	@session_destroy();
+	session_start();
+	session_destroy();
+?>
+
 <!DOCTYPE html>
 <head>
 <title> PetitionApp </title>
@@ -84,6 +90,7 @@ body#bg{
 				<option value="phillips"> Phillips Hall </option>
 				<option value="stark"> Stark Hall </option>
 				<option value="wohlford"> Wohlford Hall </option>
+				<option value="appleby"> Off-Campus </option>
 			</select></td>
 		</tr>
 		<tr>
@@ -99,5 +106,7 @@ body#bg{
 	</form>
 </div>
 </body>
+	
+
 
 	
